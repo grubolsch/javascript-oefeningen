@@ -1,0 +1,81 @@
+<!--
+
+ *
+ * /09-fetch/01-list-to-console/index.html - 11.1: liste vers console
+ *
+
+ * started at 12/05/2019
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title> - 11.1: List to console</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link rel="stylesheet" href="../../_shared/css/normalize.css" />
+    <link rel="stylesheet" href="../../_shared/css/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Javascript</h1>
+            <h2>
+                <span>11.1</span>
+                <strong>List to console</strong>
+            </h2>
+        </header>
+        <div class="content">
+            <section class="explain">
+                <p>In this exercise I want you to learn how to interact with external API's. To help you practice I provided you with a small local API you can find on <strong><a href="../../_shared/api.json">_shared/api.json</a></strong>. </p>
+                    <p><strong>For now just fetch the entire JSON object from the resource and log it to your console.</strong></p>
+
+                <p>Once the REST API of the exercise has been launched you can access it at the same domainname:port that your server resides on (in PhpStorm this is likely localhost:63342, on a apache server this will be localhost:9001). This small API follows the REST precepts, and contains, under the heroes property, data about X-Men. When you click on the
+                    button, use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch function</a> and following the JSON object, retrieve the list of X-Men and display it in the console.</p>
+
+                <p>The technique to fetch data from the server with JavaScript is commonly called <a href="https://www.w3schools.com/js/js_ajax_intro.asp">Ajax</a>. While there are different syntaxes to make the call, the general theory stays the same.</p>
+                <p>The most modern approach without using a framework is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch function</a>, I recommend using it.</p>
+
+                <h2>FAQ</h2>
+                <h3>What is an API?</h3>
+                <p>API is the acronym for Application Programming Interface, which is a software intermediary that allows two applications to talk to each other, over different servers. Each time you use an app like Facebook, send an instant message, or check the weather on your phone, you're using an API.</p>
+
+                <h3>And what is a REST API?</h3>
+                <p>A REST API stands for “Representational State Transfer”. It is a way for two computer systems to communicate over HTTP in a similar way to web browsers and servers.</p>
+                <p>It is a set of rules that developers follow when they create their API. One of these rules states that you should be able to get a piece of data (called a resource) when you link to a specific URL (in our case <strong><a href="../../_shared/api.json">_shared/api.json</a></strong>).</p>
+                <p>We will spent more time on this later in the course when you will develop your own REST API, you don't need to understand all the details here yet!</p>
+
+                <h3>Do I have to use callbacks, Promises or Async/Await?</h3>
+                <p>With <i>fetch()</i> you can choose what approach you like the most, Promise and Async/Await is considered the most modern, but there are no wrong choices here!</p>
+
+                <p>Below is some example code with Async/Await, the most modern approach:</p>
+                <img src="fetch-api-example-tutorial.png" alt="Example of Async/Await, the most modern approach" width="500"/>
+
+                <h3>What is an JSON object?</h3>
+                <p>JSON stands for JavaScript Object Notation . It is a standard readable file format used primarily to transmit data between a server and a web application. JSON Objects are surrounded by curly braces “{ }” and are written in key/value pairs.</p>
+                <p>You might have already used in javascript without realising it, when you where creating objects from scratch!</p>
+                <p>Example:</p>
+                <code><pre>
+let dog = {
+    'breed': 'Golden Retriever',
+    'age': 6,
+    'weakness': ['cookies', 'ball'],
+    'most_popular_villain': 'the Cat'
+}
+                </pre></code>
+
+            </section>
+            <section class="material">
+                <div class="actions">
+                    <button type="button" id="run">Run the script</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
